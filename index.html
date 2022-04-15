@@ -6,18 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="encriptador.css">
     <script src="encriptador.js"defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400&display=swap" rel="stylesheet">
+
+ 
+
+
     <title>Encriptador</title>
 </head>
 <body>
     
-    <div id="logo"><img src="./imagenes/logo_top.png" alt="logo_top" height="150px" width="auto"> </div>
+    <div id="logo">
+        
+       <div class="imageContainer"> <img src="./imagenes/logo_top.png" alt="logo_top" height="150px" width="auto">   </div> 
+    
+    </div>
 
 
-    <div id="mainInfo"> </div>
+    <div id="mainInfo"> 
+
+        <div id="inputText"> <input type="text"> </div>
+
+        
+
+        <div id="botonesEncriptar">   
+
+            <div id="textoAviso"> Funciona con minusculas, mayusculas, acentos y caractéres especiales.</div>
+
+            <button id="encriptarButton"> Encriptar</button>
+
+            <button id="desencriptarButton"> Desencriptar</button>
+        </div>
+        
+
+
+    </div>
 
     <div id="resultado">
 
         <div id="whiteRectangle">
+
+            <div id="imageGuy"> <img src="./imagenes/image_Guy.png" height ="300px" alt="guy_image"></div>
+
+            <div id="displayTexto"> Ningun Mensaje fue encontrado</div>
+
+            <div id="displaySubtexto"> Ingresa el texto que desees encriptar o desencriptar.  </div>
 
         </div>
 
