@@ -13,7 +13,6 @@ body{
     max-width: 10%;display: flex;
     justify-self:flex-start;
     flex-direction: column;
-    
     top:500px;
     position: absolute;
     top:50px;
@@ -27,10 +26,44 @@ body{
     margin-left: 170px;  
     display: flex;
     flex-direction: column;
-    justify-content:space-evenly;
+    justify-content:center;
     align-items: flex-start;
-    gap: 350px;
+    gap: 300px;
+    padding-left: 100px;
+
 }
+
+        #botonesEncriptar{
+            font-family: 'Inter', sans-serif;
+            width: 500px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            border:solid 5px red;
+            padding-top: 200px;
+
+        }
+
+                #encriptarButton{
+                    border: none;
+                    color: #FFFFFF;
+                    border-radius: 15px;
+                    height: 45px;
+                    width:220px;
+                    background-color: #0A3871;
+                    margin-right: 20px;
+                }
+                
+                #desencriptarButton{
+                    border:2px solid #0A3871;
+                    color: #0A3871;
+                    border-radius: 15px;
+                    height: 45px;
+                    width:220px;
+                    background-color: #D8DFE8;
+                }
+                
 
 #resultado{
     border: solid 5px green;
