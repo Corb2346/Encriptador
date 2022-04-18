@@ -22,8 +22,9 @@ function ingresarTexto(){
 }
 
 function desencriptarFuncion(){
-    let fraseEncriptada = inputText.value;
+    let fraseEncriptada = displaySubtexto.textContent;
     console.log(fraseEncriptada);
+    desencriptar(fraseEncriptada)
 };
 
 function encriptar(fraseRecibida){
@@ -81,22 +82,23 @@ console.log(arrayEncriptada);
 console.log(palabraEncriptada );
 console.log(palabraEncriptadaFixed );
 
-displaySubtexto.textContent  = palabraEncriptadaFixed;
 displayTexto.textContent= "Mensaje encriptado:";
+displaySubtexto.textContent  = palabraEncriptadaFixed;
+
 
 };
 
 
-function desencriptar(){
+function desencriptar(fraseEncriptada){
 
 contador =0;
 tomaLetra = "";
-arrayEncriptada = new Array();
+let arrayEncriptada = new Array();
 let contadorAlmacenador =0;
 
 do{
 
-tomaLetra=palabraEncriptadaFixed.charAt(contador);
+tomaLetra=fraseEncriptada.charAt(contador);
 console.log(tomaLetra + contador);
 
 if(tomaLetra === "a"){
@@ -139,7 +141,7 @@ if(tomaLetra === "a"){
     contadorAlmacenador++;
 }
 
-}while(contador<palabraEncriptadaFixed.length);
+}while(contador<fraseEncriptada.length);
 
 console.log(arrayEncriptada);
 
@@ -148,6 +150,10 @@ console.log(arrayEncriptada);
 
 let palabraDesencriptada = stringEncriptado.replace(/,/g, '');
 console.log(palabraDesencriptada);
+
+
+displayTexto.textContent= "Mensaje Desencriptado:";
+displaySubtexto.textContent  = palabraDesencriptada;
 }
 
 
