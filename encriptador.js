@@ -5,26 +5,45 @@ let imageGuy = document.getElementById("imageGuy");
 let displaySubtexto = document.getElementById("displaySubtexto");
 let displayTexto = document.getElementById("displayTexto");
 
+let defaultValue = "";
+
 inputText.addEventListener("click",ingresarTexto);
 encriptarButton.addEventListener("click",encriptarFuncion);
 desencriptarButton.addEventListener("click",desencriptarFuncion);
 
 function encriptarFuncion(){
+
+    if(inputText.value === "" || inputText.value === "Ingresa tu mensaje Aqui"){
+        displayTexto.textContent= "Ningun mensaje Encontrado";
+        displaySubtexto.textContent  = "Ingresa texto en pantalla";
+    } else {
     let fraseRecibida = inputText.value;
-    console.log( fraseRecibida );
     encriptar(fraseRecibida);
     imageGuy.remove();
+
+    }
+
+
 }
 
 function ingresarTexto(){
-
-    document.getElementById("inputText").value ="";
+    document.getElementById("inputText").value =defaultValue;
 }
 
 function desencriptarFuncion(){
-    let fraseEncriptada = displaySubtexto.textContent;
+
+    if(inputText.value === "" || inputText.value === "Ingresa tu mensaje Aqui"){
+        displayTexto.textContent= "Ningun mensaje Encontrado";
+        displaySubtexto.textContent  = "Ingresa texto en pantalla";
+    } else if(displaySubtexto.textContent === "Ingresa texto en pantalla" || displaySubtexto.textContent === "Ingresa el texto que desees encriptar o desencriptar."){
+    let fraseEncriptada = inputText.value;
     console.log(fraseEncriptada);
-    desencriptar(fraseEncriptada)
+    desencriptar(fraseEncriptada);
+    } else {
+        let fraseEncriptada = inputText.value;
+    console.log(fraseEncriptada);
+    desencriptar(fraseEncriptada);
+    }
 };
 
 function encriptar(fraseRecibida){
@@ -84,8 +103,7 @@ console.log(palabraEncriptadaFixed );
 
 displayTexto.textContent= "Mensaje encriptado:";
 displaySubtexto.textContent  = palabraEncriptadaFixed;
-
-
+inputText.value = "Ingresa tu mensaje Aqui";
 };
 
 

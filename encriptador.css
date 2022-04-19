@@ -40,7 +40,7 @@ body{
             background-color:#F3F5FC;
             outline: none;
             width: 400px;
-            height: 100px;
+            height:auto;
             font-size: 30px;
             color: #0A3871;
         }
