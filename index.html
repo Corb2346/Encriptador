@@ -24,7 +24,7 @@
 
     <div id="mainInfo"> 
 
-        <div > <input type="text" id="inputText" value ="Ingresa tu mensaje Aqui" onclick = "ingresarTexto()"></div>
+        <div > <textarea type="text" id="inputText" onclick = "ingresarTexto()">Ingresa tu mensaje Aqui  </textarea></div>
 
         
 
@@ -50,9 +50,10 @@
 
             <div id="displayTexto"> Ningun Mensaje fue encontrado</div>
 
-            <div id="displaySubtexto"> Ingresa el texto que desees encriptar o desencriptar.  </div>
+            <div id="displaySubtexto"> <textarea type="text" id="displayText"> Ingresa el texto que desees encriptar o desencriptar.</textarea>  </div>
 
             <div id="copyResetButtons"> 
+
                     <button id="copiarTexto"> Copiar</button>
 
                     <button id="resetProperties"> Reset </button>
