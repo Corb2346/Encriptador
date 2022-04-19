@@ -76,8 +76,7 @@ body{
                     background-color: #D8DFE8;
                 }
 
-                #textoAviso{
-                    
+                #textoAviso{           
                     font-family: 'Inter', sans-serif;
                     color:#495057;
                     font-size: 14px;
@@ -123,3 +122,23 @@ body{
             text-align: center;
             width: 375px;
         }
+
+            #copiarTexto{
+                border:2px solid #0A3871;
+                    color: #0A3871;
+                    border-radius: 15px;
+                    height: 45px;
+                    width:150px;
+                    background-color: #D8DFE8;
+                    visibility: hidden;
+            }
+
+            #resetProperties{ border:2px solid #0A3871;
+                color: #0A3871;
+                border-radius: 15px;
+                height: 45px;
+                width:150px;
+                background-color: #D8DFE8;
+                visibility: hidden;
+
+            }

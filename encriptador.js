@@ -1,17 +1,19 @@
-let inputText = document.getElementById("inputText");
+let inputText = document.getElementById("inputText"); // llama las varibles del html a js para utilizarse
 let encriptarButton = document.getElementById("encriptarButton");
 let desencriptarButton = document.getElementById("desencriptarButton");
 let imageGuy = document.getElementById("imageGuy");
 let displaySubtexto = document.getElementById("displaySubtexto");
 let displayTexto = document.getElementById("displayTexto");
-
+let copiarTexto = document.getElementById("copiarTexto");
+let resetProperties = document.getElementById("resetProperties");
+let whiteRectangle = document.getElementById("whiteRectangle");
 let defaultValue = "";
 
-inputText.addEventListener("click",ingresarTexto);
+inputText.addEventListener("click",ingresarTexto);  // eventos al presionar los botones y al introducir texto en pantalla
 encriptarButton.addEventListener("click",encriptarFuncion);
 desencriptarButton.addEventListener("click",desencriptarFuncion);
 
-function encriptarFuncion(){
+function encriptarFuncion(){ //funcion que encripta el mensaje en pantallaa
 
     if(inputText.value === "" || inputText.value === "Ingresa tu mensaje Aqui"){
         displayTexto.textContent= "Ningun mensaje Encontrado";
@@ -20,10 +22,11 @@ function encriptarFuncion(){
     let fraseRecibida = inputText.value;
     encriptar(fraseRecibida);
     imageGuy.remove();
-
+    whiteRectangle.style.flex;
+    whiteRectangle.style.justifyContent = "space-around";
+    copiarTexto.style.visibility = "visible";
+    resetProperties.style.visibility = "visible";
     }
-
-
 }
 
 function ingresarTexto(){
