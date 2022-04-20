@@ -8,7 +8,8 @@ body{
 }
 
 #logo{
-    max-width: 10%;display: flex;
+    max-width: 10%;
+    display: flex;
     justify-self:flex-start;
     flex-direction: column;
     top:500px;
@@ -33,10 +34,10 @@ body{
             border: none;
             background-color:#F3F5FC;
             outline: none;
-            height:350px;
-            width: 400px;
+            height:400px;
+            width: 700px;
             resize: none;
-            font-size: 30px;
+            font-size: 28px;
             color: #0A3871;
         }
 
@@ -134,3 +135,66 @@ body{
                     background-color: #D8DFE8;
                     visibility: hidden;
             }
+
+@media (max-width: 768px) {
+ body{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #logo{
+        position: relative;
+    }
+
+    #mainInfo{
+        margin-left:-400px;
+    }
+    #resultado{
+        margin-left: -450px;
+
+    }
+
+    #imageGuy{
+        display: none;
+    }
+
+    #whiteRectangle{
+        height: 200px;
+        width: 750px;
+        padding-top: 50px;
+    }
+
+    #displayText{
+        width: 500px;
+        height: 100px;
+        margin-left: -60px;
+        margin-top: 25px;
+    }
+
+    #displayTexto{
+        margin-top: 20px;
+        width: 500px;
+        height: 100px;
+    }
+
+    #botonesEncriptar{
+        border: 5px solid blue;
+        font-family: 'Inter', sans-serif;
+        width:700px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #encriptarButton{
+        width: 340px;
+        height: 55px;
+    }
+
+    #desencriptarButton{
+        width: 340px;
+        height: 55px;
+    }
+
+}
