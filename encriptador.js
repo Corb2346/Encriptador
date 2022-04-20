@@ -35,6 +35,7 @@ function encriptarFuncion(){ //funcion que encripta el mensaje en pantallaa
     copiarTexto.style.visibility = "visible";
     resetProperties.style.visibility = "visible";
     displayText.style.visibility = "visible";
+    displayText.style.height = "300px";
     }
 }
 
@@ -61,6 +62,7 @@ function desencriptarFuncion(){
     copiarTexto.style.visibility = "visible";
     resetProperties.style.visibility = "visible";
     displayText.style.visibility = "visible";
+
     }
 };
 
