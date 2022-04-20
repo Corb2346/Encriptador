@@ -14,11 +14,11 @@ inputText.addEventListener("click",ingresarTexto);  // eventos al presionar los 
 encriptarButton.addEventListener("click",encriptarFuncion);
 desencriptarButton.addEventListener("click",desencriptarFuncion);
 copiarTexto.addEventListener("click",copyText);
+resetButton.addEventListener("click",resetScreen);
 
 function copyText(){
     displayText.select();
     document.execCommand("copy");
-    
 }
 
 function encriptarFuncion(){ //funcion que encripta el mensaje en pantallaa
@@ -35,7 +35,7 @@ function encriptarFuncion(){ //funcion que encripta el mensaje en pantallaa
     copiarTexto.style.visibility = "visible";
     resetProperties.style.visibility = "visible";
     displayText.style.visibility = "visible";
-    displayText.style.height = "300px";
+    displayText.style.height = "400px";
     }
 }
 
@@ -60,9 +60,8 @@ function desencriptarFuncion(){
     whiteRectangle.style.flex;
     whiteRectangle.style.justifyContent = "space-around";
     copiarTexto.style.visibility = "visible";
-    resetProperties.style.visibility = "visible";
     displayText.style.visibility = "visible";
-
+    displayText.style.height = "400px";
     }
 };
 
