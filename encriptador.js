@@ -5,7 +5,6 @@ let imageGuy = document.getElementById("imageGuy");
 let displaySubtexto = document.getElementById("displaySubtexto");
 let displayTexto = document.getElementById("displayTexto");
 let copiarTexto = document.getElementById("copiarTexto");
-let resetProperties = document.getElementById("resetProperties");
 let whiteRectangle = document.getElementById("whiteRectangle");
 let displayText = document.getElementById("displayText");
 let defaultValue = "";
@@ -14,7 +13,6 @@ inputText.addEventListener("click",ingresarTexto);  // eventos al presionar los 
 encriptarButton.addEventListener("click",encriptarFuncion);
 desencriptarButton.addEventListener("click",desencriptarFuncion);
 copiarTexto.addEventListener("click",copyText);
-resetButton.addEventListener("click",resetScreen);
 
 function copyText(){
     displayText.select();
@@ -33,7 +31,6 @@ function encriptarFuncion(){ //funcion que encripta el mensaje en pantallaa
     whiteRectangle.style.flex;
     whiteRectangle.style.justifyContent = "space-around";
     copiarTexto.style.visibility = "visible";
-    resetProperties.style.visibility = "visible";
     displayText.style.visibility = "visible";
     displayText.style.height = "400px";
     }
@@ -119,9 +116,8 @@ let palabraEncriptadaFixed = palabraEncriptada.replace(/,/g, '');
 console.log(arrayEncriptada);
 console.log(palabraEncriptada );
 console.log(palabraEncriptadaFixed );
-
 displayTexto.textContent= "Mensaje encriptado:";
-displayText.value  = palabraEncriptadaFixed;
+displayText.textContent = palabraEncriptadaFixed;
 inputText.value = "Ingresa tu mensaje Aqui";
 };
 
@@ -190,7 +186,7 @@ console.log(palabraDesencriptada);
 
 
 displayTexto.textContent= "Mensaje Desencriptado:";
-displayText.value = palabraDesencriptada;
+displayText.textContent = palabraDesencriptada;
 inputText.value = "Ingresa tu mensaje Aqui";
 }
 
