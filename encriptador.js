@@ -56,7 +56,7 @@ function encriptarFuncion(){ //funcion que encripta el mensaje en pantallaa
         displayTexto.style.height = "70px";
         copiarTexto.style.width = "250px";
         copiarTexto.style.marginBottom = "50px";
-        displaySubtexto.style.height = "50px";
+        displaySubtexto.style.height = "50px"; 
         copiarTexto.style.visibility = "visible";
         displayText.style.visibility = "visible";
     }
@@ -88,7 +88,7 @@ function desencriptarFuncion(){
     displayText.style.height = "400px";
     }
 
-    else if(screen.width <= 768){
+    else if(screen.width <= 768 && screen.width >= 501){
         let fraseEncriptada = inputText.value;
         console.log(fraseEncriptada);
         desencriptar(fraseEncriptada);
@@ -96,23 +96,24 @@ function desencriptarFuncion(){
         document.getElementById("whiteRectangle").style.height = "450px";
         displayTexto.style.height = "70px";
         copiarTexto.style.width = "450px";
-        copiarTexto.style.marginBottom = "200px";
+        copiarTexto.style.marginBottom = "100px";
         copiarTexto.style.visibility = "visible";
         displayText.style.visibility = "visible";
+        displayText.style.height = "300px";
+        displaySubtexto.style.height = "200px";
 
     }
     else if(screen.width <= 500){
+
         let fraseEncriptada = inputText.value;
         console.log(fraseEncriptada);
         desencriptar(fraseEncriptada);
-        displayText.style.height = "50px";
-        displaySubtexto.style.height = "50px";
-        document.getElementById("whiteRectangle").style.height = "350px";
-        displayTexto.style.height = "70px";
+        document.getElementById("whiteRectangle").style.height = "550px";
         copiarTexto.style.width = "250px";
         copiarTexto.style.marginBottom = "50px";
         copiarTexto.style.visibility = "visible";
         displayText.style.visibility = "visible";
+        displayText.style.height = "200px";
     }
 
 };
@@ -243,6 +244,4 @@ console.log(palabraDesencriptada);
 displayTexto.textContent= "Mensaje Desencriptado:";
 displayText.textContent = palabraDesencriptada;
 inputText.value = "Ingresa tu mensaje Aqui";
-}
-
-
+};
