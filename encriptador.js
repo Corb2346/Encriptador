@@ -25,7 +25,7 @@ function encriptarFuncion(){ //funcion que encripta el mensaje en pantallaa
         displayTexto.textContent= "Ningun mensaje Encontrado";
         displaySubtexto.textContent  = "Ingresa texto en pantalla";
         inputText.value = "Ingresa tu mensaje Aqui";
-    } else {
+    } else  if(screen.width > 768){
     let fraseRecibida = inputText.value;
     encriptar(fraseRecibida);
     imageGuy.remove();
@@ -35,12 +35,30 @@ function encriptarFuncion(){ //funcion que encripta el mensaje en pantallaa
     displayText.style.visibility = "visible";
     displayText.style.height = "400px";
     }
-    if(screen.width === 768){
+     else if(screen.width <= 768 ){
+        let fraseRecibida = inputText.value;
+        encriptar(fraseRecibida);
         displayText.style.height = "125px";
         document.getElementById("whiteRectangle").style.height = "380px";
         displayTexto.style.height = "70px";
-        copiarTexto.style.width = "450px";
+        copiarTexto.style.width = "250px";
         copiarTexto.style.marginBottom = "50px";
+        copiarTexto.style.visibility = "visible";
+        displayText.style.visibility = "visible";
+    }
+
+    else if(screen.width <= 500){
+        let fraseRecibida = inputText.value;
+        encriptar(fraseRecibida);
+        displayText.style.height = "50px";
+        displaySubtexto.style.height = "50px";
+        document.getElementById("whiteRectangle").style.height = "400px";
+        displayTexto.style.height = "70px";
+        copiarTexto.style.width = "250px";
+        copiarTexto.style.marginBottom = "50px";
+        displaySubtexto.style.height = "50px";
+        copiarTexto.style.visibility = "visible";
+        displayText.style.visibility = "visible";
     }
 }
 
@@ -58,7 +76,7 @@ function desencriptarFuncion(){
     let fraseEncriptada = inputText.value;
     console.log(fraseEncriptada);
     desencriptar(fraseEncriptada);
-    } else {
+    } else if(screen.width >= 768){
         let fraseEncriptada = inputText.value;
     console.log(fraseEncriptada);
     desencriptar(fraseEncriptada);
@@ -69,12 +87,32 @@ function desencriptarFuncion(){
     displayText.style.visibility = "visible";
     displayText.style.height = "400px";
     }
-    if(screen.width === 768){
+
+    else if(screen.width <= 768){
+        let fraseEncriptada = inputText.value;
+        console.log(fraseEncriptada);
+        desencriptar(fraseEncriptada);
         displayText.style.height = "125px";
-        document.getElementById("whiteRectangle").style.height = "380px";
+        document.getElementById("whiteRectangle").style.height = "450px";
         displayTexto.style.height = "70px";
         copiarTexto.style.width = "450px";
+        copiarTexto.style.marginBottom = "200px";
+        copiarTexto.style.visibility = "visible";
+        displayText.style.visibility = "visible";
+
+    }
+    else if(screen.width <= 500){
+        let fraseEncriptada = inputText.value;
+        console.log(fraseEncriptada);
+        desencriptar(fraseEncriptada);
+        displayText.style.height = "50px";
+        displaySubtexto.style.height = "50px";
+        document.getElementById("whiteRectangle").style.height = "350px";
+        displayTexto.style.height = "70px";
+        copiarTexto.style.width = "250px";
         copiarTexto.style.marginBottom = "50px";
+        copiarTexto.style.visibility = "visible";
+        displayText.style.visibility = "visible";
     }
 
 };
