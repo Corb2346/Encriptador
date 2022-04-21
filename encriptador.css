@@ -81,7 +81,6 @@ body{
     }
 
     #whiteRectangle{
-        border:5px solid blue;
         background-color: #FFFFFF;
         box-shadow: 5px 10px 18px #88888885;
         border-radius: 50px;
