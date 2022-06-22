@@ -2,7 +2,6 @@ let inputText = document.getElementById("inputText"); // llama las varibles del 
 let encriptarButton = document.getElementById("encriptarButton");
 let desencriptarButton = document.getElementById("desencriptarButton");
 let imageGuy = document.getElementById("imageGuy");
-let displaySubtexto = document.getElementById("displaySubtexto");
 let displayTexto = document.getElementById("displayTexto");
 let copiarTexto = document.getElementById("copiarTexto");
 let whiteRectangle = document.getElementById("whiteRectangle");
@@ -21,11 +20,12 @@ function copyText(){
 
 function encriptarFuncion(){ //funcion que encripta el mensaje en pantallaa
 
-    if(inputText.value === "" || inputText.value === "Ingresa tu mensaje Aqui"){
+    if(inputText.value == "" || inputText.value == "Ingresa tu mensaje Aqui" || inputText.value== null || inputText.textContent === "Ingresa tu mensaje Aqui"){
         displayTexto.textContent= "Ningun mensaje Encontrado";
-        displaySubtexto.textContent  = "Ingresa texto en pantalla";
-        inputText.value = "Ingresa tu mensaje Aqui";
-    } else  if(screen.width > 768){
+        displaySubtexto.textContent = "Ingresa texto en pantalla";
+        inputText.textContent= "Ingresa tu mensaje Aqui";
+    } else 
+    if(screen.width > 768){
     let fraseRecibida = inputText.value;
     encriptar(fraseRecibida);
     imageGuy.remove();
@@ -35,35 +35,33 @@ function encriptarFuncion(){ //funcion que encripta el mensaje en pantallaa
     displayText.style.visibility = "visible";
     displayText.style.height = "400px";
     }
-     else if(screen.width <= 768 ){
+     else if(screen.width <= 768 && screen.width >= 500 ){
         let fraseRecibida = inputText.value;
         encriptar(fraseRecibida);
-        displayText.style.height = "125px";
-        document.getElementById("whiteRectangle").style.height = "380px";
-        displayTexto.style.height = "70px";
-        copiarTexto.style.width = "250px";
-        copiarTexto.style.marginBottom = "50px";
-        copiarTexto.style.visibility = "visible";
-        displayText.style.visibility = "visible";
-    }
 
-    else if(screen.width <= 500){
-        let fraseRecibida = inputText.value;
-        encriptar(fraseRecibida);
-        displayText.style.height = "50px";
-        displaySubtexto.style.height = "50px";
         document.getElementById("whiteRectangle").style.height = "400px";
         displayTexto.style.height = "70px";
         copiarTexto.style.width = "250px";
         copiarTexto.style.marginBottom = "50px";
-        displaySubtexto.style.height = "50px"; 
         copiarTexto.style.visibility = "visible";
         displayText.style.visibility = "visible";
+        displayText.style.height="250px";
+    }
+
+    else if(screen.width < 500){
+        let fraseRecibida = inputText.value;
+        encriptar(fraseRecibida);
+        document.getElementById("whiteRectangle").style.height = "450px";
+        displayTexto.style.height = "70px";
+        copiarTexto.style.width = "250px";
+        copiarTexto.style.visibility = "visible";
+        displayText.style.visibility = "visible";
+        displayText.style.height ="150px";
     }
 }
 
 function ingresarTexto(){
-    document.getElementById("inputText").value =defaultValue;
+    document.getElementById("inputText").value= defaultValue;
 }
 
 function desencriptarFuncion(){
@@ -72,7 +70,7 @@ function desencriptarFuncion(){
         displayTexto.textContent= "Ningun mensaje Encontrado";
         displaySubtexto.textContent  = "Ingresa texto en pantalla";
         inputText.value = "Ingresa tu mensaje Aqui";
-    } else if(displaySubtexto.textContent === "Ingresa texto en pantalla" || displaySubtexto.textContent === "Ingresa el texto que desees encriptar o desencriptar."){
+    } else if(displayText.textContent === "Ingresa texto en pantalla" ||displayText.textContent === "Ingresa el texto que desees encriptar o desencriptar."){
     let fraseEncriptada = inputText.value;
     console.log(fraseEncriptada);
     desencriptar(fraseEncriptada);
@@ -88,32 +86,30 @@ function desencriptarFuncion(){
     displayText.style.height = "400px";
     }
 
-    else if(screen.width <= 768 && screen.width >= 501){
+    else if(screen.width <= 768 && screen.width >= 500){
         let fraseEncriptada = inputText.value;
         console.log(fraseEncriptada);
         desencriptar(fraseEncriptada);
-        displayText.style.height = "125px";
-        document.getElementById("whiteRectangle").style.height = "450px";
+        document.getElementById("whiteRectangle").style.height = "400px";
         displayTexto.style.height = "70px";
         copiarTexto.style.width = "450px";
         copiarTexto.style.marginBottom = "100px";
         copiarTexto.style.visibility = "visible";
         displayText.style.visibility = "visible";
-        displayText.style.height = "300px";
-        displaySubtexto.style.height = "200px";
+        displayText.style.height="250px";
 
     }
-    else if(screen.width <= 500){
+    else if(screen.width < 500){
 
         let fraseEncriptada = inputText.value;
         console.log(fraseEncriptada);
         desencriptar(fraseEncriptada);
-        document.getElementById("whiteRectangle").style.height = "550px";
+        document.getElementById("whiteRectangle").style.height ="450px";
         copiarTexto.style.width = "250px";
         copiarTexto.style.marginBottom = "50px";
         copiarTexto.style.visibility = "visible";
         displayText.style.visibility = "visible";
-        displayText.style.height = "200px";
+        displayText.style.height ="150px";
     }
 
 };
